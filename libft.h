@@ -6,7 +6,7 @@
 /*   By: carmoren <carmoren@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 18:54:55 by carmoren          #+#    #+#             */
-/*   Updated: 2023/05/09 11:11:53 by carmoren         ###   ########.fr       */
+/*   Updated: 2023/05/11 18:36:08 by carmoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int		ft_isalpha(int c);
 int		ft_isalnum(int c);
 int		ft_isascii(int c);
 int		ft_isprint(int c);
-int		ft_memset(void *memoria, int c, size_t bytes);
+int		*ft_memset(void *b, int c, size_t len);
 int		ft_isdigit(int digito);
 
 #endif

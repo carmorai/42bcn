@@ -6,7 +6,7 @@
 /*   By: carmoren <carmoren@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 12:30:12 by carmoren          #+#    #+#             */
-/*   Updated: 2023/05/09 12:08:56 by carmoren         ###   ########.fr       */
+/*   Updated: 2023/05/11 18:29:01 by carmoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 //FUNCION MEMSET - PONE CEROS INICIALIZANDO ASI ARRAYS
 int main(void)
 {
-    char buffer[10]; // Un bloque de memoria de 10 bytes
+    char buffer[4]; // Un bloque de memoria de 4 bytes
     
     ft_memset(buffer, 0, sizeof(buffer)); // Llenamos el bloque de memoria con el valor 0
     
@@ -33,8 +33,8 @@ int main(void)
 /*FUNCION ISPRINT - 1 el caracter es imprimible(32 a 127) y 0 no lo es
 int main(void)
 {
-	int ch = 37;
-	int result = ft_isascii(ch);
+	int ch = 17;
+	int result = ft_isprint(ch);
 	if (result == 1)
 	{	
 		printf("%d es un caracter imprimible.\n", ch);
@@ -45,12 +45,12 @@ int main(void)
 	}
 
 	return 0;
-}*/
-
+}
+*/
 /*FUNCION ISASCII - 1 el caracter es ascii(0-127) y 0 no lo es
 int main(void)
 {
-	int ch = 128;
+	int ch = 127;
 	if (ft_isascii(ch))
 	{	
 		printf("%d es un valor ASCII válido.\n", ch);
