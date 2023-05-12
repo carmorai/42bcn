@@ -14,7 +14,36 @@
 #include <string.h>
 #include "libft.h"
 
-//MEMCPY - COPIA DE MEMORIA
+//funcion STRLCPY - COPIA UNA ARRAY EN OTRa
+int main(void)
+{
+    char src[] = "Hello, world!";
+    char dst[20];
+
+    size_t len = ft_strlcpy(dst, src, sizeof(dst));
+
+    printf("Copied string: %s\n", dst);
+    printf("Length: %zu\n", len);
+
+    return 0;
+}
+
+
+
+
+/*ESTUDIAR MEMMOVE - 
+int main(void)
+{
+	char src[] = "Hello, world!";
+    char dst[20];
+
+    ft_memmove(dst, src, sizeof(src));
+
+    printf("dst: %s", dst);
+
+    return 0;
+}*/
+/*MEMCPY - COPIA DE MEMORIA
 int main(void)
 {
     char src[] = "Hello, world!";
@@ -31,7 +60,7 @@ int main(void)
     printf("dst: %s\n", dst);
 
     return 0;
-}
+}*/
 
 /*FUNCIÓN BZERO - PONE CEROS
 int main(void)
