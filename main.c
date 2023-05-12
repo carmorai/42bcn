@@ -11,9 +11,46 @@
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <string.h>
 #include "libft.h"
 
-//FUNCION MEMSET - PONE CEROS INICIALIZANDO ASI ARRAYS
+//MEMCPY - COPIA DE MEMORIA
+int main(void)
+{
+    char src[] = "Hello, world!";
+    char dst[sizeof(src)];
+
+    printf("Antes de ft_memcpy:\n");
+    printf("src: %s\n", src);
+    printf("dst: %s\n", dst);
+
+    ft_memcpy(dst, src, sizeof(src));
+
+    printf("Después de ft_memcpy:\n");
+    printf("src: %s\n", src);
+    printf("dst: %s\n", dst);
+
+    return 0;
+}
+
+/*FUNCIÓN BZERO - PONE CEROS
+int main(void)
+{
+    char str[5] = "HOLA";
+
+    printf("Antes del ft_bzero: %s\n", str);
+
+    ft_bzero(str, sizeof(str));
+
+    printf("Después del ft_bzero: %s\n", str);
+
+    return 0;
+}*/
+
+
+
+
+/*FUNCION MEMSET - PONE CUALQUIER NUMERO O CARACTER EN UNA ARRAY INICIALIZANDO ASI LA ARR
 int main(void)
 {
     char buffer[4]; // Un bloque de memoria de 4 bytes
@@ -28,7 +65,7 @@ int main(void)
     printf("\n");
 
     return 0;
-}
+}*/
 
 /*FUNCION ISPRINT - 1 el caracter es imprimible(32 a 127) y 0 no lo es
 int main(void)
