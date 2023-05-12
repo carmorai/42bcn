@@ -14,7 +14,82 @@
 #include <string.h>
 #include "libft.h"
 
-//funcion STRLCPY - COPIA UNA ARRAY EN OTRa
+//STRRCHR - busca el carácter desde el final de la cadena hacia el inicio
+int main(void) {
+    const char* str = "Esta frase es una prueba, hola";
+    int ch = 'o';
+    char* result = ft_strrchr(str, ch);
+    
+    if (result != NULL) {
+        printf("Caracter '%c' encontrado en la posición: %ld\n", ch, result - str);
+    } else {
+        printf("Caracter '%c' no encontrado\n", ch);
+    }
+    
+    return 0;
+}
+
+
+
+/*STRCHR - busca el carácter desde el inicio de la cadena hasta el final
+int main(void) {
+    const char* str = "Esta es la cadena";
+    int ch = 'd';
+    char* result = ft_strchr(str, ch);
+    
+    if (result != NULL) {
+	printf("La cadena es '%s'\n", str);
+        printf("Caracter '%c' encontrado en la posición: %ld\n", ch, result - str);
+    } else {
+        printf("Caracter '%c' no encontrado\n", ch);
+    }
+    
+    return 0;
+}*/
+
+
+
+
+/* tolower: es al revés del toupper - lo convierte a minúcula
+int main(void) {
+    char uppercase = 'A';
+    char lowercase = ft_tolower(uppercase);
+    
+    printf("La mayúscula: %c\n", uppercase);
+    printf("La pasamos a minúscula: %c\n", lowercase);
+    
+    return 0;
+}*/
+
+
+
+/* TOUPPER - SI LE PASAMOS MINUSCULA, LO PONE MAYUSCULA Y AL REVÉS
+int main(void) {
+    char lowercase = 'a';
+    char uppercase = ft_toupper(lowercase);
+    
+    printf("La minúcula: %c\n", lowercase);
+    printf("La pasamos a Mayúscula: %c\n", uppercase);
+
+    return 0;
+}*/
+
+
+
+/*strlcat - FUNCIÓN QUE ANEXA DOS ARRAYS
+int main(void) {
+    char dest[20] = "HOLA";
+    const char* src = " MUNDO";
+    size_t size = 20;
+    size_t result = ft_strlcat(dest, src, size);
+    
+    printf("longitud: %lu\n", result);
+    printf("Unión strings: %s\n", dest);
+    
+    return 0;
+}*/
+
+/*ESTUDIAR funcion STRLCPY - COPIA UNA ARRAY EN OTRa
 int main(void)
 {
     char src[] = "Hello, world!";
@@ -26,7 +101,7 @@ int main(void)
     printf("Length: %zu\n", len);
 
     return 0;
-}
+}*/
 
 
 
