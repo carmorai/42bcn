@@ -6,7 +6,7 @@
 /*   By: carmoren <carmoren@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 12:30:12 by carmoren          #+#    #+#             */
-/*   Updated: 2023/05/11 18:29:01 by carmoren         ###   ########.fr       */
+/*   Updated: 2023/05/13 16:50:11 by carmoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <string.h>
 #include "libft.h"
 
-//STRRCHR - busca el carácter desde el final de la cadena hacia el inicio
+/*STRRCHR - busca el carácter desde el final de la cadena hacia el inicio
 int main(void) {
     const char* str = "Esta frase es una prueba, hola";
     int ch = 'o';
@@ -27,9 +27,7 @@ int main(void) {
     }
     
     return 0;
-}
-
-
+}*/
 
 /*STRCHR - busca el carácter desde el inicio de la cadena hasta el final
 int main(void) {
@@ -47,9 +45,6 @@ int main(void) {
     return 0;
 }*/
 
-
-
-
 /* tolower: es al revés del toupper - lo convierte a minúcula
 int main(void) {
     char uppercase = 'A';
@@ -61,8 +56,6 @@ int main(void) {
     return 0;
 }*/
 
-
-
 /* TOUPPER - SI LE PASAMOS MINUSCULA, LO PONE MAYUSCULA Y AL REVÉS
 int main(void) {
     char lowercase = 'a';
@@ -73,8 +66,6 @@ int main(void) {
 
     return 0;
 }*/
-
-
 
 /*strlcat - FUNCIÓN QUE ANEXA DOS ARRAYS
 int main(void) {
@@ -102,9 +93,6 @@ int main(void)
 
     return 0;
 }*/
-
-
-
 
 /*ESTUDIAR MEMMOVE - 
 int main(void)
@@ -151,9 +139,6 @@ int main(void)
     return 0;
 }*/
 
-
-
-
 /*FUNCION MEMSET - PONE CUALQUIER NUMERO O CARACTER EN UNA ARRAY INICIALIZANDO ASI LA ARR
 int main(void)
 {
@@ -186,8 +171,8 @@ int main(void)
 	}
 
 	return 0;
-}
-*/
+}*/
+
 /*FUNCION ISASCII - 1 el caracter es ascii(0-127) y 0 no lo es
 int main(void)
 {
@@ -257,7 +242,6 @@ int main(void)
 
     return (0);
 }*/
-
 
 /*FUNCION STRLEN-CUENTA LOS CARACTERES DE UNA ARRAY
 int	main(void)
