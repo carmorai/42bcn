@@ -14,6 +14,43 @@
 #include <string.h>
 #include "libft.h"
 
+//memchr - se utiliza para buscar la primera aparición de un byte específico en un bloque de memoria, NO UN CARACTER COMO SI PASA EN STRCHR QUE BUSCA UN CARACTER EN UNA CADENA DE CARACTERES, AQUÍ ESTAMOS BUSCANDO BYTES.
+int main(void) {
+    char str[] = "Hello, world!";
+    char searchChar = 'o';
+    
+    // Buscar la primera aparición de 'o' en str
+    char *result = ft_memchr(str, searchChar, sizeof(str));
+    
+    if (result != NULL) {
+        printf("Se encontró el carácter '%c' en la posición %ld.\n", searchChar, result - str);
+    } else {
+        printf("El carácter '%c' no se encontró en la cadena.\n", searchChar);
+    }
+    
+    return 0;
+}
+
+/*strncmp - compara 2 cadenas de caracteres. Si son iguales, si una es mayor que la otra o si son diferentes hasta cierto número de caracteres especificado.
+int main(void) {
+    const char *s1 = "Hdasaslo";
+    const char *s2 = "Hel";
+    int n = 6;
+
+    int result = strncmp(s1, s2, n);
+
+    if (result == 0) {
+        printf("Las primeras %d letras de s1 y s2 son iguales.\n", n);
+    } else if (result < 0) {
+        printf("Las primeras %d letras de s1 son mayores que las de s2.\n", n);
+    } else {
+        printf("Las primeras %d letras de s1 son menores que las de s2.\n", n);
+    }
+
+    return 0;
+}*/
+
+
 /*STRRCHR - busca el carácter desde el final de la cadena hacia el inicio
 int main(void) {
     const char* str = "Esta frase es una prueba, hola";
@@ -94,7 +131,7 @@ int main(void)
     return 0;
 }*/
 
-/*ESTUDIAR MEMMOVE - 
+/*ESTUDIAR MEMMOVE - lo mismo que memcpy pero tiene en cuenta la superposición
 int main(void)
 {
 	char src[] = "Hello, world!";
@@ -106,7 +143,7 @@ int main(void)
 
     return 0;
 }*/
-/*MEMCPY - COPIA DE MEMORIA
+/*MEMCPY - se utiliza para copiar un bloque de memoria de una ubicación a otra. No tiene en cuenta superposición
 int main(void)
 {
     char src[] = "Hello, world!";
@@ -125,7 +162,7 @@ int main(void)
     return 0;
 }*/
 
-/*FUNCIÓN BZERO - PONE CEROS
+/*FUNCIÓN BZERO - establecer todos los bytes de un bloque de memoria en cero (es decir, establecerlos en '\0')
 int main(void)
 {
     char str[5] = "HOLA";
@@ -139,7 +176,7 @@ int main(void)
     return 0;
 }*/
 
-/*FUNCION MEMSET - PONE CUALQUIER NUMERO O CARACTER EN UNA ARRAY INICIALIZANDO ASI LA ARR
+/*FUNCION MEMSET -  establecer los bytes de un bloque de memoria en un valor específico
 int main(void)
 {
     char buffer[4]; // Un bloque de memoria de 4 bytes
