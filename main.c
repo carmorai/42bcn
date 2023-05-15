@@ -14,7 +14,94 @@
 #include <string.h>
 #include "libft.h"
 
-//memchr - se utiliza para buscar la primera aparición de un byte específico en un bloque de memoria, NO UN CARACTER COMO SI PASA EN STRCHR QUE BUSCA UN CARACTER EN UNA CADENA DE CARACTERES, AQUÍ ESTAMOS BUSCANDO BYTES.
+//strdup - . Toma una cadena de entrada y crea una copia exacta de esa cadena en un nuevo bloque de memoria asignado dinámicamente.
+int main(void)
+{
+    const char *original = "Hola, mundo!";
+    char *duplicate = ft_strdup(original);
+
+    if (duplicate == NULL)
+    {
+        printf("Error al duplicar la cadena.\n");
+        return 1;
+    }
+
+    printf("Original: %s\n", original);
+    printf("Duplicado: %s\n", duplicate);
+
+    free(duplicate);
+
+    return 0;
+}
+
+
+/*calloc
+int main(void)
+{
+    size_t num_elements = 5;
+    size_t element_size = sizeof(int);
+
+    int *numbers = (int *)ft_calloc(num_elements, element_size);
+    if (numbers == NULL)
+    {
+        printf("Error al asignar memoria.\n");
+        return 1;
+    }
+
+    for (size_t i = 0; i < num_elements; i++)
+    {
+        printf("%d ", numbers[i]); // Los elementos se inicializan en cero
+    }
+    printf("\n");
+
+    free(numbers);
+
+    return 0;
+}*/
+
+/*atoi - convierte una cadena de caracteres que representa un número entero en su equivalente numérico de tipo int
+int main(void)
+{
+	const char *str = " 88";
+	int result = ft_atoi(str);
+	printf("El resultado de la conversión es: %d\n", result);
+	return 0;
+}*/
+
+
+/*strnstr - busca la primera aparición de una subcadena dentro de una cadena principal, pero limita la búsqueda a los primeros len caracteres de la cadena principal. Si la subcadena se encuentra dentro de ese límite, la función devuelve un puntero al inicio de la subcadena encontrada. Si no se encuentra, la función devuelve NULL 
+int main(void)
+{
+    const char *haystack = "Hello, world!";
+    [Iconst char *needle = "worldsd";
+    char *result = ft_strnstr(haystack, needle, 13);
+
+    if (result != NULL)
+        printf("Se encontró la subcadena '%s' en '%s'\n", needle, haystack);
+    else
+        printf("No se encontró la subcadena '%s' en '%s'\n", needle, haystack);
+
+    return 0;
+}*/
+
+/*memcmp - compara dos bloques de memoria
+int main(void)
+{
+    char str1[] = "Hello";
+    char str2[] = "Hello";
+    int result = ft_memcmp(str1, str2, 5);
+    
+    if (result == 0)
+        printf("Los primeros 5 caracteres de str1 y str2 son iguales.\n");
+    else if (result < 0)
+        printf("Los primeros 5 caracteres de str1 son menores que los de str2.\n");
+    else
+        printf("Los primeros 5 caracteres de str1 son mayores que los de str2.\n");
+    
+    return 0;
+}*/
+
+/*memchr - busca un carácter específico dentro de un bloque de memoria. Su propósito es encontrar la posición de memoria en la que se encuentra un byte determinado. Utiliza para buscar la primera aparición de un byte específico en un bloque de memoria, NO UN CARACTER COMO SI PASA EN STRCHR QUE BUSCA UN CARACTER EN UNA CADENA DE CARACTERES, AQUÍ ESTAMOS BUSCANDO BYTES.
 int main(void) {
     char str[] = "Hello, world!";
     char searchChar = 'o';
@@ -29,7 +116,7 @@ int main(void) {
     }
     
     return 0;
-}
+}*/
 
 /*strncmp - compara 2 cadenas de caracteres. Si son iguales, si una es mayor que la otra o si son diferentes hasta cierto número de caracteres especificado.
 int main(void) {
