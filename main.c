@@ -14,7 +14,153 @@
 #include <string.h>
 #include "libft.h"
 
-//strdup - . Toma una cadena de entrada y crea una copia exacta de esa cadena en un nuevo bloque de memoria asignado dinámicamente.
+/* ft_putstr_fd
+int main()
+{
+    char *str = "Hello, world!";
+    int fd = 1; // File descriptor 1 represents stdout
+
+    ft_putstr_fd(str, fd);
+
+    return 0;
+}*/
+
+/* ftputchar_fd - que se encarga de escribir un carácter en un descriptor de archivo especificado. Toma dos parámetros: el carácter c que se desea escribir y el descriptor de archivo fd donde se realizará la escritura. 
+void	ft_putchar_fd(char c, int fd)
+{
+	if (fd)
+		write(fd, &c, 1);
+}
+
+int	main(void)
+{
+	char c = 'A';
+	int fd = 1; // Descriptor de archivo estándar para la salida estándar (stdout)
+
+	ft_putchar_fd(c, fd);
+
+	return 0;
+}*/
+
+/*striteri - es una función que te permite recorrer una cadena de caracteres y aplicar una función personalizada a cada carácter, dándote la flexibilidad de realizar cualquier operación deseada en cada uno de ellos - no genera una tercera cadena, ya que opera directamente sobre la cadena original, modificando sus caracteres en su lugar.
+void	ft_modify_char(unsigned int index, char *c)
+{
+	if (index % 2 == 0)
+		*c = ft_toupper(*c);
+	else
+		*c = ft_tolower(*c);
+}
+
+int	main(void)
+{
+	char str[] = "Hello, World!";
+	
+	printf("Original string: %s\n", str);
+	ft_striteri(str, ft_modify_char);
+	printf("Modificada la string: %s\n", str);
+
+	return 0;
+}*/
+
+/*ft_strmapi - permite aplicar una transformación personalizada a cada carácter de una cadena y obtener una nueva cadena modificada como resultado.
+char	ft_modify_char(unsigned int index, char c)
+{
+	return (index % 2 == 0) ? ft_toupper(c) : ft_tolower(c);
+}
+
+int main()
+{
+	char *str = "Hello, World!";
+	char *modified_str = ft_strmapi(str, ft_modify_char);
+	
+	printf("Original String: %s\n", str);
+	printf("Modified String: %s\n", modified_str);
+	
+	free(modified_str);
+	return 0;
+}*/
+
+/*itoa - La función toma un número entero n como argumento y devuelve un puntero a una cadena de caracteres que representa ese número.
+int main()
+{
+    int num = -12345;
+    char *str = ft_itoa(num);
+    printf("Number: %d\n", num);
+    printf("String: %s\n", str);
+    free(str);
+    return 0;
+}*/
+
+/*split - toma una cadena de caracteres s y un carácter delimitador c y divide la cadena en una matriz de cadenas. Cada cadena en la matriz es un segmento de la cadena original que está delimitado por el carácter c.
+int main(void) {
+    const char *str = "Hello-World-How-Are-You";
+    char delimiter = '-';
+    
+    char **result = ft_split(str, delimiter);
+    if (result) {
+        int i = 0;
+        while (result[i]) {
+            printf("Palabra %d: %s\n", i + 1, result[i]);
+            i++;
+        }
+    } else {
+        printf("Error: Fallo al asignar memoria para el resultado.\n");
+    }
+    
+    return 0;
+}*/
+
+/*ft_strtrim - elimina los caracteres especificados en el conjunto set al principio y al final de la cadena s1 y devuelve una nueva cadena resultante sin esos caracteres.
+int main(void) {
+    const char *str1 = "----Hello, World!-----";
+    const char *set = "-";
+
+    char *trimmed = ft_strtrim(str1, set);
+    if (trimmed) {
+        printf("Cadena recortada: \"%s\"\n", trimmed);
+        free(trimmed);
+    } else {
+        printf("Error: Fallo al asignar memoria para la cadena recortada.\n");
+    }
+
+    return 0;
+}*/
+
+/*strjoin - concatena dos cadenas de caracteres y devuelve una nueva cadena que contiene la concatenación de ambas cadenas
+int main(void) {
+    const char *str1 = "¡Hola, ";
+    const char *str2 = "mundo!";
+    
+    char *resultado = ft_strjoin(str1, str2);
+    if (resultado) {
+        printf("Cadena unida: %s\n", resultado);
+        free(resultado);
+    } else {
+        printf("Error: Fallo al asignar memoria para la cadena unida.\n");
+    }
+    
+    return 0;
+}*/
+
+/*dupstr -  toma una cadena de entrada s, una posición inicial start y una longitud len, y devuelve una subcadena extraída de s que comienza en la posición start y tiene una longitud de len.
+
+int main(void) {
+    const char *str = "Hola, mundo!";
+    unsigned int start = 7;
+    size_t len = 5;
+
+    char *substring = ft_substr(str, start, len);
+    if (substring) {
+        printf("Substring: %s\n", substring);
+        free(substring);
+    } else {
+        printf("No se ha podido asignar memoria a la subcadena\n");
+    }
+
+    return 0;
+}*/
+
+/*strdup - . Toma una cadena de entrada y crea una copia exacta de esa cadena en un nuevo bloque de memoria asignado dinámicamente.
 int main(void)
 {
     const char *original = "Hola, mundo!";
@@ -32,7 +178,7 @@ int main(void)
     free(duplicate);
 
     return 0;
-}
+}*/
 
 
 /*calloc
@@ -249,7 +395,7 @@ int main(void)
     return 0;
 }*/
 
-/*FUNCIÓN BZERO - establecer todos los bytes de un bloque de memoria en cero (es decir, establecerlos en '\0')
+/*FUNCIÓN BZERO - establecer todos los bytes de un bloque de memoria en cero (es decir, establecerlos en '\0')- EL 2 PARAMETRO: es el número de bytes que se deben establecer en cero
 int main(void)
 {
     char str[5] = "HOLA";
@@ -342,7 +488,7 @@ int main(void)
 
 }*/
 
-/*FUNCIÓN ISALPHA - COMPRUEBA SI ES ALFABETO O NO
+/*FUNCIÓN ISALPHA - COMPRUEBA SI ES ALFABETO O NO (a - z y A - Z)
 int main(void)
 {
     char c1 = 'a';
