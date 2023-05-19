@@ -6,7 +6,7 @@
 /*   By: carmoren <carmoren@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/09 10:29:07 by carmoren          #+#    #+#             */
-/*   Updated: 2023/05/13 17:03:22 by carmoren         ###   ########.fr       */
+/*   Updated: 2023/05/19 10:46:00 by carmoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_memset(void *b, int c, size_t len)
 {
 	size_t			i;
 	unsigned char	*ptr;
-	
+
 	ptr = b;
 	i = 0;
 	while (i < len)

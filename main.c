@@ -6,7 +6,7 @@
 /*   By: carmoren <carmoren@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 12:30:12 by carmoren          #+#    #+#             */
-/*   Updated: 2023/05/13 16:50:11 by carmoren         ###   ########.fr       */
+/*   Updated: 2023/05/19 11:31:36 by carmoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -350,19 +350,25 @@ int main(void) {
     return 0;
 }*/
 
-/*ESTUDIAR funcion STRLCPY - COPIA UNA ARRAY EN OTRa
+//ESTUDIAR funcion STRLCPY - COPIA UNA ARRAY EN OTRa asegurandose de cerrarla correctamente
 int main(void)
 {
     char src[] = "Hello, world!";
-    char dst[20];
+    char dst[] = "pruebas carlos moreno";
 
-    size_t len = ft_strlcpy(dst, src, sizeof(dst));
+	printf("string SRC del strlcpy: %s\n", src);
+    printf("string DST del strlcpy: %s\n", dst);
 
-    printf("Copied string: %s\n", dst);
-    printf("Length: %zu\n", len);
+
+
+	size_t len = ft_strlcpy(dst, src, sizeof(dst));
+
+	printf("string original SRC: %s\n", src);
+    printf("string copiada DST: %s\n", dst);
+    printf("longitud: %zu\n", len);
 
     return 0;
-}*/
+}
 
 /*ESTUDIAR MEMMOVE - lo mismo que memcpy pero tiene en cuenta la superposición
 int main(void)

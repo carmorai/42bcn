@@ -1,6 +1,18 @@
-#include "libft.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: carmoren <carmoren@student.42barcel>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/05/19 10:29:38 by carmoren          #+#    #+#             */
+/*   Updated: 2023/05/19 10:36:10 by carmoren         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-static long int ft_base(long int base, size_t exp, int *value)
+#include	"libft.h"
+
+static long int	ft_base(long int base, size_t exp, int *value)
 {
 	long int	nbr;
 
