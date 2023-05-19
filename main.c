@@ -6,7 +6,7 @@
 /*   By: carmoren <carmoren@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 12:30:12 by carmoren          #+#    #+#             */
-/*   Updated: 2023/05/19 11:31:36 by carmoren         ###   ########.fr       */
+/*   Updated: 2023/05/19 18:04:17 by carmoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -339,9 +339,9 @@ int main(void) {
 
 /*strlcat - FUNCIÓN QUE ANEXA DOS ARRAYS
 int main(void) {
-    char dest[20] = "HOLA";
-    const char* src = " MUNDO";
-    size_t size = 20;
+    char dest[5] = "HOLA";
+    const char* src = "MUNDO";
+    size_t size = 10;
     size_t result = ft_strlcat(dest, src, size);
     
     printf("longitud: %lu\n", result);
@@ -350,7 +350,7 @@ int main(void) {
     return 0;
 }*/
 
-//ESTUDIAR funcion STRLCPY - COPIA UNA ARRAY EN OTRa asegurandose de cerrarla correctamente
+/*ESTUDIAR funcion STRLCPY - COPIA UNA ARRAY EN OTRa asegurandose de cerrarla correctamente
 int main(void)
 {
     char src[] = "Hello, world!";
@@ -368,20 +368,24 @@ int main(void)
     printf("longitud: %zu\n", len);
 
     return 0;
-}
+}*/
 
-/*ESTUDIAR MEMMOVE - lo mismo que memcpy pero tiene en cuenta la superposición
+//ESTUDIAR MEMMOVE - lo mismo que memcpy pero tiene en cuenta la superposición
 int main(void)
 {
 	char src[] = "Hello, world!";
-    char dst[20];
+    char dst[] = "Carlosidsf a afsdfa";
 
     ft_memmove(dst, src, sizeof(src));
 
     printf("dst: %s", dst);
 
     return 0;
-}*/
+	// char src[] = "Hello, world!";
+	//char dst[] = "Carlos";
+	// ft_memmove(&src[9], &src[7], sizeof(src));
+	// printf("dst: %s", src);
+}
 /*MEMCPY - se utiliza para copiar un bloque de memoria de una ubicación a otra. No tiene en cuenta superposición
 int main(void)
 {

@@ -6,7 +6,7 @@
 /*   By: carmoren <carmoren@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/13 16:47:14 by carmoren          #+#    #+#             */
-/*   Updated: 2023/05/19 12:03:42 by carmoren         ###   ########.fr       */
+/*   Updated: 2023/05/19 16:47:37 by carmoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	unsigned int	i;
-	unsigned int	c;
+	size_t			c;
 
 	i = 0;
 	c = 0;
