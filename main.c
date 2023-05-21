@@ -14,6 +14,21 @@
 #include <string.h>
 #include "libft.h"
 
+// BONUS 
+
+/*int main(void) {
+    void *content = "Ejemplo de contenido";
+    t_list *new_node = ft_lstnew(content);
+    
+    if (new_node == NULL) {
+        printf("Error al crear la lista.\n");
+    } else {
+        printf("Lista creada correctamente.\n");
+    }
+    
+    return 0;
+}*/
+
 /* ft_putstr_fd
 int main()
 {
@@ -299,7 +314,7 @@ int main(void) {
     return 0;
 }*/
 
-/*STRCHR - busca el carácter desde el inicio de la cadena hasta el final
+//STRCHR - busca el carácter desde el inicio de la cadena hasta el final
 int main(void) {
     const char* str = "Esta es la cadena";
     int ch = 'd';
@@ -313,7 +328,7 @@ int main(void) {
     }
     
     return 0;
-}*/
+}
 
 /* tolower: es al revés del toupper - lo convierte a minúcula
 int main(void) {
@@ -328,7 +343,7 @@ int main(void) {
 
 /* TOUPPER - SI LE PASAMOS MINUSCULA, LO PONE MAYUSCULA Y AL REVÉS
 int main(void) {
-    char lowercase = 'a';
+    char lowercase = 'w';
     char uppercase = ft_toupper(lowercase);
     
     printf("La minúcula: %c\n", lowercase);
@@ -370,7 +385,7 @@ int main(void)
     return 0;
 }*/
 
-//ESTUDIAR MEMMOVE - lo mismo que memcpy pero tiene en cuenta la superposición
+/*ESTUDIAR MEMMOVE - lo mismo que memcpy pero tiene en cuenta la superposición
 int main(void)
 {
 	char src[] = "Hello, world!";
@@ -385,7 +400,7 @@ int main(void)
 	//char dst[] = "Carlos";
 	// ft_memmove(&src[9], &src[7], sizeof(src));
 	// printf("dst: %s", src);
-}
+}*/
 /*MEMCPY - se utiliza para copiar un bloque de memoria de una ubicación a otra. No tiene en cuenta superposición
 int main(void)
 {

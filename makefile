@@ -16,6 +16,10 @@ SRCS = ft_strlen.c ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprin
 
 OBJS = $(SRCS:.c=.o)
 
+BONUS = ft_lstnew.c
+
+BONUS_OBJS = $(BONUS:.c=.o)
+
 INCLUDE = libft.h
 
 CC = gcc
