@@ -1,12 +1,12 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    makefile                                           :+:      :+:    :+:    #
+#    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: carmoren <carmoren@student.42barcel>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/05/04 11:46:41 by carmoren          #+#    #+#              #
-#    Updated: 2023/05/09 11:59:18 by carmoren         ###   ########.fr        #
+#    Created: 2023/05/22 13:44:39 by carmoren          #+#    #+#              #
+#    Updated: 2023/05/22 14:07:16 by carmoren         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,9 +16,9 @@ SRCS = ft_strlen.c ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprin
 
 OBJS = $(SRCS:.c=.o)
 
-BONUS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c   
+BONUS_SRCS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c   
 
-BONUS_OBJS = $(BONUS:.c=.o)
+BONUS_OBJS = $(BONUS_SRCS:.c=.o)
 
 INCLUDE = libft.h
 
@@ -32,11 +32,17 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	ar $(ARFLAGS) $(NAME) $(OBJS)
 
+bonus: .bonus
+
+.bonus : $(OBJS) $(BONUS_OBJS)
+	ar $(ARFLAGS) $(NAME) $(BONUS_OBJS)
+	@touch .bonus
+
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	$(RM) $(OBJS) $(OBJS_BONUS)
+	$(RM) $(OBJS) $(BONUS_OBJS) .bonus
 
 fclean: clean
 	$(RM) $(NAME)

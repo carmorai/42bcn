@@ -6,7 +6,7 @@
 /*   By: carmoren <carmoren@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 12:30:12 by carmoren          #+#    #+#             */
-/*   Updated: 2023/05/19 18:04:17 by carmoren         ###   ########.fr       */
+/*   Updated: 2023/05/22 14:20:04 by carmoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -145,7 +145,7 @@ int main(void) {
 int main(void) {
     const char *str1 = "¡Hola, ";
     const char *str2 = "mundo!";
-    
+    libft.a ft_lstnew.o ft_lstadd_front.o ft_lstsize.o ft_lstlast.o ft_lstadd_back.o ft_lstdelone.o ft
     char *resultado = ft_strjoin(str1, str2);
     if (resultado) {
         printf("Cadena unida: %s\n", resultado);
@@ -220,14 +220,14 @@ int main(void)
     return 0;
 }*/
 
-/*atoi - convierte una cadena de caracteres que representa un número entero en su equivalente numérico de tipo int
+//atoi - convierte una cadena de caracteres que representa un número entero en su equivalente numérico de tipo int
 int main(void)
 {
-	const char *str = " 88";
+	const char *str = "-54";
 	int result = ft_atoi(str);
 	printf("El resultado de la conversión es: %d\n", result);
 	return 0;
-}*/
+}
 
 
 /*strnstr - busca la primera aparición de una subcadena dentro de una cadena principal, pero limita la búsqueda a los primeros len caracteres de la cadena principal. Si la subcadena se encuentra dentro de ese límite, la función devuelve un puntero al inicio de la subcadena encontrada. Si no se encuentra, la función devuelve NULL 
@@ -314,7 +314,7 @@ int main(void) {
     return 0;
 }*/
 
-//STRCHR - busca el carácter desde el inicio de la cadena hasta el final
+/*STRCHR - busca el carácter desde el inicio de la cadena hasta el final
 int main(void) {
     const char* str = "Esta es la cadena";
     int ch = 'd';
@@ -328,7 +328,7 @@ int main(void) {
     }
     
     return 0;
-}
+}*/
 
 /* tolower: es al revés del toupper - lo convierte a minúcula
 int main(void) {
