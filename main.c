@@ -144,8 +144,7 @@ int main(void) {
 /*strjoin - concatena dos cadenas de caracteres y devuelve una nueva cadena que contiene la concatenación de ambas cadenas
 int main(void) {
     const char *str1 = "¡Hola, ";
-    const char *str2 = "mundo!";
-    libft.a ft_lstnew.o ft_lstadd_front.o ft_lstsize.o ft_lstlast.o ft_lstadd_back.o ft_lstdelone.o ft
+    const char *str2 = "mundoadsfa fda sfasdfasfd asdf!";
     char *resultado = ft_strjoin(str1, str2);
     if (resultado) {
         printf("Cadena unida: %s\n", resultado);
@@ -157,12 +156,12 @@ int main(void) {
     return 0;
 }*/
 
-/*dupstr -  toma una cadena de entrada s, una posición inicial start y una longitud len, y devuelve una subcadena extraída de s que comienza en la posición start y tiene una longitud de len.
+/*substr -  toma una cadena de entrada s, una posición inicial start y una longitud len, y devuelve una subcadena extraída de s que comienza en la posición start y tiene una longitud de len.
 
 int main(void) {
     const char *str = "Hola, mundo!";
-    unsigned int start = 7;
-    size_t len = 5;
+    unsigned int start = 2;
+    size_t len = 2;
 
     char *substring = ft_substr(str, start, len);
     if (substring) {
@@ -220,22 +219,22 @@ int main(void)
     return 0;
 }*/
 
-//atoi - convierte una cadena de caracteres que representa un número entero en su equivalente numérico de tipo int
+/*atoi - convierte una cadena de caracteres que representa un número entero en su equivalente numérico de tipo int
 int main(void)
 {
-	const char *str = "-54";
+	const char *str = "158";
 	int result = ft_atoi(str);
 	printf("El resultado de la conversión es: %d\n", result);
 	return 0;
-}
+}*/
 
 
 /*strnstr - busca la primera aparición de una subcadena dentro de una cadena principal, pero limita la búsqueda a los primeros len caracteres de la cadena principal. Si la subcadena se encuentra dentro de ese límite, la función devuelve un puntero al inicio de la subcadena encontrada. Si no se encuentra, la función devuelve NULL 
 int main(void)
 {
-    const char *haystack = "Hello, world!";
-    [Iconst char *needle = "worldsd";
-    char *result = ft_strnstr(haystack, needle, 13);
+    const char *haystack = "carlos mdoreno moreno";
+    const char *needle = "mdoreno";
+    char *result = ft_strnstr(haystack, needle, strlen(haystack));
 
     if (result != NULL)
         printf("Se encontró la subcadena '%s' en '%s'\n", needle, haystack);
@@ -248,7 +247,7 @@ int main(void)
 /*memcmp - compara dos bloques de memoria
 int main(void)
 {
-    char str1[] = "Hello";
+    char str1[] = "Helo";
     char str2[] = "Hello";
     int result = ft_memcmp(str1, str2, 5);
     
@@ -281,18 +280,18 @@ int main(void) {
 
 /*strncmp - compara 2 cadenas de caracteres. Si son iguales, si una es mayor que la otra o si son diferentes hasta cierto número de caracteres especificado.
 int main(void) {
-    const char *s1 = "Hdasaslo";
-    const char *s2 = "Hel";
+    const char *s1 = "Hii";
+    const char *s2 = "Hola";
     int n = 6;
 
     int result = strncmp(s1, s2, n);
 
     if (result == 0) {
-        printf("Las primeras %d letras de s1 y s2 son iguales.\n", n);
+        printf("En las primeras %d letras s1 y s2 son iguales.\n", n);
     } else if (result < 0) {
-        printf("Las primeras %d letras de s1 son mayores que las de s2.\n", n);
+        printf("En las primeras %d letras, s1 es menor que s2.\n", n);
     } else {
-        printf("Las primeras %d letras de s1 son menores que las de s2.\n", n);
+        printf("en las primeras %d letras, s1 es mayor que s2.\n", n);
     }
 
     return 0;
@@ -307,7 +306,7 @@ int main(void) {
     
     if (result != NULL) {
         printf("Caracter '%c' encontrado en la posición: %ld\n", ch, result - str);
-    } else {
+    } else r
         printf("Caracter '%c' no encontrado\n", ch);
     }
     
@@ -354,9 +353,9 @@ int main(void) {
 
 /*strlcat - FUNCIÓN QUE ANEXA DOS ARRAYS
 int main(void) {
-    char dest[5] = "HOLA";
-    const char* src = "MUNDO";
-    size_t size = 10;
+    char dest[15] = "HOLA";
+    const char* src = "MUNDOss";
+    size_t size = 20;
     size_t result = ft_strlcat(dest, src, size);
     
     printf("longitud: %lu\n", result);

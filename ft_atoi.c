@@ -10,38 +10,33 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <limits.h>
 #include "libft.h"
 
-int ft_space(char c)
+int	ft_atoi(const char	*str)
 {
-	return (c == ' ' || c == '\t' || c == '\n' || c == '\v' || c == '\f' || c == '\r');
-}
+	int					i;
+	int					neg;
+	unsigned long int	num;
 
-int ft_atoi(const char *str)
-{
-	int i = 0;
-	int final_value = 1;
-	long long int nbr = 0;
-
-	while (str[i] && ft_space(str[i]))
-		i++;
-
-	if (str[i] == '-' || str[i] == '+')
+	i = 0;
+	neg = 1;
+	num = 0;
+	while (str[i] == 32 || (str[i] >= 9 && str[i] <= 13))
 	{
-		if (str[i] == '-')
-			final_value = -1;
 		i++;
 	}
-
+	if (str[i] == '-')
+	{
+		neg = -1;
+		i++;
+	}
+	else if (str[i] == '+')
+		i++;
 	while (str[i] >= '0' && str[i] <= '9')
 	{
-		nbr = nbr * 10 + (str[i] - '0');
+		num = num * 10;
+		num = num + (str[i] - 48);
 		i++;
-
-		if ((nbr < 0 && final_value == -1) || (nbr > INT_MAX && final_value == 1))
-			return (final_value == -1 ? 0 : -1);
 	}
-
-	return (nbr * final_value);
+	return (num * neg);
 }
