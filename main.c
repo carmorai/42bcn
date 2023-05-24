@@ -351,18 +351,18 @@ int main(void) {
     return 0;
 }*/
 
-/*strlcat - FUNCIÓN QUE ANEXA DOS ARRAYS
+//strlcat - FUNCIÓN QUE ANEXA DOS ARRAYS
 int main(void) {
-    char dest[15] = "HOLA";
-    const char* src = "MUNDOss";
-    size_t size = 20;
+    char dest[15] = "CAR";
+    const char* src = "HOL";
+    size_t size = 5;
     size_t result = ft_strlcat(dest, src, size);
     
     printf("longitud: %lu\n", result);
     printf("Unión strings: %s\n", dest);
     
     return 0;
-}*/
+}
 
 /*ESTUDIAR funcion STRLCPY - COPIA UNA ARRAY EN OTRa asegurandose de cerrarla correctamente
 int main(void)
