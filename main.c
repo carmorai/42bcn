@@ -125,10 +125,10 @@ int main(void) {
     return 0;
 }*/
 
-/*ft_strtrim - elimina los caracteres especificados en el conjunto set al principio y al final de la cadena s1 y devuelve una nueva cadena resultante sin esos caracteres.
+//ft_strtrim - elimina los caracteres especificados en el conjunto set al principio y al final de la cadena s1 y devuelve una nueva cadena resultante sin esos caracteres.
 int main(void) {
-    const char *str1 = "----Hello, World!-----";
-    const char *set = "-";
+    const char *str1 = "Hello, World!";
+    const char *set = "H";
 
     char *trimmed = ft_strtrim(str1, set);
     if (trimmed) {
@@ -139,7 +139,7 @@ int main(void) {
     }
 
     return 0;
-}*/
+}
 
 /*strjoin - concatena dos cadenas de caracteres y devuelve una nueva cadena que contiene la concatenación de ambas cadenas
 int main(void) {
@@ -280,8 +280,8 @@ int main(void) {
 
 /*strncmp - compara 2 cadenas de caracteres. Si son iguales, si una es mayor que la otra o si son diferentes hasta cierto número de caracteres especificado.
 int main(void) {
-    const char *s1 = "Hii";
-    const char *s2 = "Hola";
+    const char *s1 = "H";
+    const char *s2 = "Hii";
     int n = 6;
 
     int result = strncmp(s1, s2, n);
@@ -351,18 +351,18 @@ int main(void) {
     return 0;
 }*/
 
-//strlcat - FUNCIÓN QUE ANEXA DOS ARRAYS
+/*strlcat - FUNCIÓN QUE ANEXA DOS ARRAYS
 int main(void) {
-    char dest[15] = "CAR";
+    char dest[15] = "CAR mor";
     const char* src = "HOL";
-    size_t size = 5;
+    size_t size = 20;
     size_t result = ft_strlcat(dest, src, size);
     
     printf("longitud: %lu\n", result);
     printf("Unión strings: %s\n", dest);
     
     return 0;
-}
+}*/
 
 /*ESTUDIAR funcion STRLCPY - COPIA UNA ARRAY EN OTRa asegurandose de cerrarla correctamente
 int main(void)
@@ -431,7 +431,7 @@ int main(void)
     printf("Después del ft_bzero: %s\n", str);
 
     return 0;
-}*/
+}/*
 
 /*FUNCION MEMSET -  establecer los bytes de un bloque de memoria en un valor específico
 int main(void)
