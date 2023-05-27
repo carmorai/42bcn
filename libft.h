@@ -6,7 +6,7 @@
 /*   By: carmoren <carmoren@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 18:54:55 by carmoren          #+#    #+#             */
-/*   Updated: 2023/05/22 12:31:07 by carmoren         ###   ########.fr       */
+/*   Updated: 2023/05/26 18:01:21 by carmoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
+void	ft_putnbr_fd(int n, int fd);
+void	ft_putendl_fd(char *s, int fd);
 int		ft_lstsize(t_list *lst);
 void	ft_lstadd_front(t_list **lst, t_list *new);
 void	ft_lstadd_back(t_list **alst, t_list *new);

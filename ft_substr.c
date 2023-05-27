@@ -6,7 +6,7 @@
 /*   By: carmoren <carmoren@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 10:34:03 by carmoren          #+#    #+#             */
-/*   Updated: 2023/05/19 10:34:06 by carmoren         ###   ########.fr       */
+/*   Updated: 2023/05/26 11:51:26 by carmoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,11 +36,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (res == NULL)
 		return (0);
 	while (start < ft_strlen(s) && i < len && s[start])
-	{
-		res[i] = s[start];
-		i++;
-		start++;
-	}
+		res[i++] = s[start++];
 	res[i] = '\0';
 	return (res);
 }

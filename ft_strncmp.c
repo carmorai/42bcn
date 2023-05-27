@@ -6,7 +6,7 @@
 /*   By: carmoren <carmoren@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 10:33:18 by carmoren          #+#    #+#             */
-/*   Updated: 2023/05/19 10:33:19 by carmoren         ###   ########.fr       */
+/*   Updated: 2023/05/26 13:22:54 by carmoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	{
 		if (s1[i] != s2[i])
 		{
-			if (s1[i] < s2[i])
-			{
-				return (-1);
-			}
-			else
-			{
-				return (1);
-			}
+			return (((unsigned char)s1[i] - (unsigned char)s2[i]));
 		}
 		i++;
 	}

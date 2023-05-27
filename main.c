@@ -6,7 +6,7 @@
 /*   By: carmoren <carmoren@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 12:30:12 by carmoren          #+#    #+#             */
-/*   Updated: 2023/05/22 14:20:04 by carmoren         ###   ########.fr       */
+/*   Updated: 2023/05/26 15:48:12 by carmoren         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 #include "libft.h"
 
 // BONUS 
-
 /*int main(void) {
     void *content = "Ejemplo de contenido";
     t_list *new_node = ft_lstnew(content);
@@ -28,7 +27,6 @@
     
     return 0;
 }*/
-
 /* ft_putstr_fd
 int main()
 {
@@ -39,7 +37,6 @@ int main()
 
     return 0;
 }*/
-
 /* ftputchar_fd - que se encarga de escribir un carácter en un descriptor de archivo especificado. Toma dos parámetros: el carácter c que se desea escribir y el descriptor de archivo fd donde se realizará la escritura. 
 void	ft_putchar_fd(char c, int fd)
 {
@@ -56,7 +53,6 @@ int	main(void)
 
 	return 0;
 }*/
-
 /*striteri - es una función que te permite recorrer una cadena de caracteres y aplicar una función personalizada a cada carácter, dándote la flexibilidad de realizar cualquier operación deseada en cada uno de ellos - no genera una tercera cadena, ya que opera directamente sobre la cadena original, modificando sus caracteres en su lugar.
 void	ft_modify_char(unsigned int index, char *c)
 {
@@ -76,7 +72,6 @@ int	main(void)
 
 	return 0;
 }*/
-
 /*ft_strmapi - permite aplicar una transformación personalizada a cada carácter de una cadena y obtener una nueva cadena modificada como resultado.
 char	ft_modify_char(unsigned int index, char c)
 {
@@ -94,7 +89,6 @@ int main()
 	free(modified_str);
 	return 0;
 }*/
-
 /*itoa - La función toma un número entero n como argumento y devuelve un puntero a una cadena de caracteres que representa ese número.
 int main()
 {
@@ -105,7 +99,6 @@ int main()
     free(str);
     return 0;
 }*/
-
 /*split - toma una cadena de caracteres s y un carácter delimitador c y divide la cadena en una matriz de cadenas. Cada cadena en la matriz es un segmento de la cadena original que está delimitado por el carácter c.
 int main(void) {
     const char *str = "Hello-World-How-Are-You";
@@ -124,8 +117,7 @@ int main(void) {
     
     return 0;
 }*/
-
-//ft_strtrim - elimina los caracteres especificados en el conjunto set al principio y al final de la cadena s1 y devuelve una nueva cadena resultante sin esos caracteres.
+/*ft_strtrim - elimina los caracteres especificados en el conjunto set al principio y al final de la cadena s1 y devuelve una nueva cadena resultante sin esos caracteres.
 int main(void) {
     const char *str1 = "Hello, World!";
     const char *set = "H";
@@ -139,8 +131,7 @@ int main(void) {
     }
 
     return 0;
-}
-
+}*/
 /*strjoin - concatena dos cadenas de caracteres y devuelve una nueva cadena que contiene la concatenación de ambas cadenas
 int main(void) {
     const char *str1 = "¡Hola, ";
@@ -155,7 +146,6 @@ int main(void) {
     
     return 0;
 }*/
-
 /*substr -  toma una cadena de entrada s, una posición inicial start y una longitud len, y devuelve una subcadena extraída de s que comienza en la posición start y tiene una longitud de len.
 
 int main(void) {
@@ -173,7 +163,6 @@ int main(void) {
 
     return 0;
 }*/
-
 /*strdup - . Toma una cadena de entrada y crea una copia exacta de esa cadena en un nuevo bloque de memoria asignado dinámicamente.
 int main(void)
 {
@@ -193,8 +182,6 @@ int main(void)
 
     return 0;
 }*/
-
-
 /*calloc
 int main(void)
 {
@@ -218,7 +205,6 @@ int main(void)
 
     return 0;
 }*/
-
 /*atoi - convierte una cadena de caracteres que representa un número entero en su equivalente numérico de tipo int
 int main(void)
 {
@@ -227,8 +213,6 @@ int main(void)
 	printf("El resultado de la conversión es: %d\n", result);
 	return 0;
 }*/
-
-
 /*strnstr - busca la primera aparición de una subcadena dentro de una cadena principal, pero limita la búsqueda a los primeros len caracteres de la cadena principal. Si la subcadena se encuentra dentro de ese límite, la función devuelve un puntero al inicio de la subcadena encontrada. Si no se encuentra, la función devuelve NULL 
 int main(void)
 {
@@ -243,7 +227,6 @@ int main(void)
 
     return 0;
 }*/
-
 /*memcmp - compara dos bloques de memoria
 int main(void)
 {
@@ -260,7 +243,6 @@ int main(void)
     
     return 0;
 }*/
-
 /*memchr - busca un carácter específico dentro de un bloque de memoria. Su propósito es encontrar la posición de memoria en la que se encuentra un byte determinado. Utiliza para buscar la primera aparición de un byte específico en un bloque de memoria, NO UN CARACTER COMO SI PASA EN STRCHR QUE BUSCA UN CARACTER EN UNA CADENA DE CARACTERES, AQUÍ ESTAMOS BUSCANDO BYTES.
 int main(void) {
     char str[] = "Hello, world!";
@@ -277,7 +259,6 @@ int main(void) {
     
     return 0;
 }*/
-
 /*strncmp - compara 2 cadenas de caracteres. Si son iguales, si una es mayor que la otra o si son diferentes hasta cierto número de caracteres especificado.
 int main(void) {
     const char *s1 = "H";
@@ -296,8 +277,6 @@ int main(void) {
 
     return 0;
 }*/
-
-
 /*STRRCHR - busca el carácter desde el final de la cadena hacia el inicio
 int main(void) {
     const char* str = "Esta frase es una prueba, hola";
@@ -312,7 +291,6 @@ int main(void) {
     
     return 0;
 }*/
-
 /*STRCHR - busca el carácter desde el inicio de la cadena hasta el final
 int main(void) {
     const char* str = "Esta es la cadena";
@@ -328,7 +306,6 @@ int main(void) {
     
     return 0;
 }*/
-
 /* tolower: es al revés del toupper - lo convierte a minúcula
 int main(void) {
     char uppercase = 'A';
@@ -339,7 +316,6 @@ int main(void) {
     
     return 0;
 }*/
-
 /* TOUPPER - SI LE PASAMOS MINUSCULA, LO PONE MAYUSCULA Y AL REVÉS
 int main(void) {
     char lowercase = 'w';
@@ -350,7 +326,6 @@ int main(void) {
 
     return 0;
 }*/
-
 /*strlcat - FUNCIÓN QUE ANEXA DOS ARRAYS
 int main(void) {
     char dest[15] = "CAR mor";
@@ -363,7 +338,6 @@ int main(void) {
     
     return 0;
 }*/
-
 /*ESTUDIAR funcion STRLCPY - COPIA UNA ARRAY EN OTRa asegurandose de cerrarla correctamente
 int main(void)
 {
@@ -383,7 +357,6 @@ int main(void)
 
     return 0;
 }*/
-
 /*ESTUDIAR MEMMOVE - lo mismo que memcpy pero tiene en cuenta la superposición
 int main(void)
 {
@@ -418,7 +391,6 @@ int main(void)
 
     return 0;
 }*/
-
 /*FUNCIÓN BZERO - establecer todos los bytes de un bloque de memoria en cero (es decir, establecerlos en '\0')- EL 2 PARAMETRO: es el número de bytes que se deben establecer en cero
 int main(void)
 {
@@ -432,7 +404,6 @@ int main(void)
 
     return 0;
 }/*
-
 /*FUNCION MEMSET -  establecer los bytes de un bloque de memoria en un valor específico
 int main(void)
 {
@@ -449,7 +420,6 @@ int main(void)
 
     return 0;
 }*/
-
 /*FUNCION ISPRINT - 1 el caracter es imprimible(32 a 127) y 0 no lo es
 int main(void)
 {
@@ -466,7 +436,6 @@ int main(void)
 
 	return 0;
 }*/
-
 /*FUNCION ISASCII - 1 el caracter es ascii(0-127) y 0 no lo es
 int main(void)
 {
@@ -482,7 +451,6 @@ int main(void)
 
 	return 0;
 }*/
-
 /*FUNCIÓN ISALNUM - TEXTO O NUMEROS(1), CUALQUIER OTRO(0)
 int main(void)
 {
@@ -496,7 +464,6 @@ int main(void)
 
     return 0;
 }*/
-
 /*FUNCIÓN ISDIGIT - DIGITOS DEL 0 AL 9(1) Y OTROS(0)
 int main(void) 
 {
@@ -511,7 +478,6 @@ int main(void)
    return(0);
 
 }*/
-
 /*FUNCIÓN ISALPHA - COMPRUEBA SI ES ALFABETO O NO (a - z y A - Z)
 int main(void)
 {
@@ -536,7 +502,6 @@ int main(void)
 
     return (0);
 }*/
-
 /*FUNCION STRLEN-CUENTA LOS CARACTERES DE UNA ARRAY
 int	main(void)
 {
